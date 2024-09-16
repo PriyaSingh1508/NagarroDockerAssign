@@ -1,0 +1,47 @@
+# .NET specific ignores
+**/bin/
+**/obj/
+**/node_modules/
+**/.vs/
+**/.vscode/
+**/.idea/
+**/.angular/
+**/Migrations/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.lastcodeanalysissucceeded
+*.ide
+*.ilk
+*.pdb
+*.log
+*.cache
+*.hmap
+*.db
+*.opendb
+
+# Build directories
+/bin
+/obj
+
+# NuGet packages
+*.nupkg
+*.snupkg
+
+# Visual Studio 2019+
+.vscode/
+.vscode/*
+.vscode/.*
+*.code-workspace
+
+
+# DotNetLocal
+**.vs

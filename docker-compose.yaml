@@ -1,0 +1,34 @@
+version: "3.4"
+
+services:
+  todoapplication:
+    build:
+      context: ./ToDoApplication
+      dockerfile: Dockerfile
+    image: dpcode27/todoapi:1.0
+    container_name: todo-container
+    ports:
+      - "8001:80"
+
+  basiccalculator:
+    build:
+      context: ./BasicCalculator
+      dockerfile: Dockerfile
+    image: dpcode27/calculator:2.0
+    container_name: calculator-container
+    ports:
+      - "8002:80"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: sqlserver-container
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${SA_PASSWORD}
+    ports:
+      - "1403:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+
+volumes:
+  sqlserverdata:
